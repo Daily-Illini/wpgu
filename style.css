@@ -1,0 +1,67 @@
+:root {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+    --main-bg-color: #F7A11A;
+    background-color: var(--main-bg-color);
+font-family: 'Courier New', Courier, monospace;
+}
+
+div.flex-container {
+    display: flex;
+    padding: 20px;
+}
+
+.text-container {
+    width: 66%;
+}
+
+div.now-playing {
+    display: flex;
+    border: 5px black solid;
+    height: 33%;
+    box-sizing: border-box;
+    margin-right:20px;
+}
+
+.now-playing-title {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.now-playing-text {
+    padding: 1em;
+}
+
+.now-playing-artist {
+    font-weight: 200;
+    font-size: 1em;
+}
+
+.album-art {
+    float:right;
+    max-width: 50%;
+}
+
+.link-container {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align-last: justify;
+    border-bottom: 2px black dotted;
+    font-size: 120%;
+
+}
+
+.logo-container {
+    padding: 20px;
+    padding-right: 70px;
+    float: left;
+    width: 20%;
+}
+
+a {
+    text-decoration-style: dotted;
+    font-weight: 700
+;}
