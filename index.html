@@ -11,7 +11,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/txr1dqd.css">
     </head>
+
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
@@ -19,7 +21,7 @@
         
         <div class="flex-container">
             <div class="logo-container">
-                <img src="assets/vertical_wordmark.svg"> 
+                <img src="assets/horizontal_wordmark.svg"> 
             </div>
 
             <div class="text-container">
@@ -30,24 +32,60 @@
                     <a href="">news</a>
                     <a href="">shop</a>
                 </div>
-                <br>
-                <b>now playing:</b>
+                <div class="yellow-on-black">NOW PLAYING</div>
+
                 <div class="now-playing">
-                    <img src="assets/placeholder_albumart.jpg" class="album-art">
+                    <img src="assets/placeholder.svg" id="dynamicImg" class="album-art">
                     <div class="now-playing-text">
-                        <div class = "now-playing-title">
-                            The Logical Song
-                        </div>
-                        <div class = "now-playing-artist">
-                            Supertramp
-                        </div>
+                        <div class = "now-playing-title" id="dynamicTitle"></div>
+                        <br>
+                        <div class = "now-playing-artist" id="dynamicArtist"></div>
                     </div>
-                    
+                    <script>
+                        // function loadXMLDoc() {
+                            var xmlhttp = new XMLHttpRequest();
+                            xmlhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    parseXML(this);
+                                }
+                            };
+                            xmlhttp.open("GET", "https://streamdb8web.securenetsystems.net/player_status_update/WPGUFM.xml", true);
+                            xmlhttp.send();
+                        // }
+            
+                        function parseXML(xml) {
+                            var x, i, xmlDoc;
+                            xmlDoc = xml.responseXML;
+                            titleNode = xmlDoc.getElementsByTagName("title");
+                            artistNode = xmlDoc.getElementsByTagName("artist");
+                            imgNode = xmlDoc.getElementsByTagName("cover");
+
+
+
+                            document.getElementById("dynamicTitle").innerHTML = titleNode[0].childNodes[0].nodeValue;
+                            document.getElementById("dynamicArtist").innerHTML = artistNode[0].childNodes[0].nodeValue;
+                            document.getElementById("dynamicImg").src = imgNode[0].childNodes[0].nodeValue;
+
+
+                        }
+                        </script>
                 </div>
             </div>
 
 
         </div>
-        <script src="" async defer></script>
+        <!-- <script src="" async defer></script> -->
     </body>
 </html>
+
+<!-- <html>
+  <body>
+    <a id="dynamicLink" href=""><img id="dynamicImg" src="" /> </a>
+  </body>
+  <script>
+    var link = document.getElementById('dynamicLink'); 
+    link.href = "http://www.url.com"
+    var img = document.getElementById('dynamicImg'); 
+    img.src = "http://www.url.com/img.png"
+  </script>
+</html> -->
