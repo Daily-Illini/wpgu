@@ -10,6 +10,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WPGU 107.1 Champaign's Alternative</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://use.typekit.net/txr1dqd.css">
     </head>
@@ -20,11 +21,9 @@
         <![endif]-->
         
         <div class="flex-container">
-            <div class="logo-container">
-                <img src="assets/horizontal_wordmark.svg"> 
-            </div>
-
             <div class="text-container">
+                <img src="assets/horizontal_wordmark.svg" style="max-width: 50ch;"alt="WPGU logo"> 
+
                 <div class="link-container">
                     <a href="">about</a>
                     <a href="">music</a>
@@ -35,23 +34,21 @@
                 <div class="yellow-on-black">NOW PLAYING</div>
 
                 <div class="now-playing">
-                    <img src="assets/placeholder.svg" id="dynamicImg" class="album-art">
+                    <img src="assets/placeholder.svg" id="dynamicImg" class="album-art" alt="Currently playing album art">
                     <div class="now-playing-text">
-                        <div class = "now-playing-title" id="dynamicTitle"></div>
+                        <div class = "now-playing-title" id="dynamicTitle">WPGU 107.1</div>
                         <br>
-                        <div class = "now-playing-artist" id="dynamicArtist"></div>
+                        <div class = "now-playing-artist" id="dynamicArtist">Champaign's Alternative</div>
                     </div>
                     <script>
-                        // function loadXMLDoc() {
-                            var xmlhttp = new XMLHttpRequest();
-                            xmlhttp.onreadystatechange = function() {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    parseXML(this);
-                                }
-                            };
-                            xmlhttp.open("GET", "https://streamdb8web.securenetsystems.net/player_status_update/WPGUFM.xml", true);
-                            xmlhttp.send();
-                        // }
+                        var xmlhttp = new XMLHttpRequest();
+                        xmlhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                parseXML(this);
+                            }
+                        };
+                        xmlhttp.open("GET", "https://streamdb8web.securenetsystems.net/player_status_update/WPGUFM.xml", true);
+                        xmlhttp.send();
             
                         function parseXML(xml) {
                             var x, i, xmlDoc;
@@ -60,12 +57,9 @@
                             artistNode = xmlDoc.getElementsByTagName("artist");
                             imgNode = xmlDoc.getElementsByTagName("cover");
 
-
-
                             document.getElementById("dynamicTitle").innerHTML = titleNode[0].childNodes[0].nodeValue;
                             document.getElementById("dynamicArtist").innerHTML = artistNode[0].childNodes[0].nodeValue;
                             document.getElementById("dynamicImg").src = imgNode[0].childNodes[0].nodeValue;
-
 
                         }
                         </script>

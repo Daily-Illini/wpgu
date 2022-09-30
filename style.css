@@ -18,7 +18,7 @@ div.flex-container {
 }
 
 .text-container {
-    width: 66%;
+    width: 75%;
 }
 
 div.now-playing {
@@ -28,7 +28,6 @@ div.now-playing {
     border-left:5px black solid;
     height: 7em;
     box-sizing: border-box;
-
     
 }
 
@@ -38,24 +37,24 @@ div.now-playing {
     font-weight: 600;
     padding: 0em 1em 0em 1em;
     margin-top: 1em;
+}
+
+.now-playing-text {
+    padding-left: 1em;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column; 
+    /* align-self: center; */
+    line-height: 1.2em;
 
 }
 
 .now-playing-title {
     font-weight: 600;
     font-size: 1.3em;
-    line-height: 1em;
-
+    padding-bottom: .4em;
 }
 
-.now-playing-text {
-    padding-left: 1em;
-    /* align-items: center; */
-    display: flex;
-    flex-direction: column; 
-    align-self: center;
-
-}
 
 .now-playing-artist {
     font-weight: 200;
@@ -65,23 +64,16 @@ div.now-playing {
 .album-art {
     float:right;
     max-width: 50%;
+    border-right: 1px black dotted;
 }
 
 .link-container {
-    padding-top: 1em;
+    /* padding-top: .6em; */
     padding-bottom: .5em;
     text-align-last: justify;
     border-bottom: 2px black dotted;
     font-size: 120%;
-
-}
-
-.logo-container {
-    /* padding: 20px;
-    padding-right: 70px;
-    float: left;
-    width: 20%; */
-    width: 55%;
+    font-variant-caps: all-small-caps;
 }
 
 a {
