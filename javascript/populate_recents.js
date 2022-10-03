@@ -31,7 +31,7 @@ function newSong(song) {
     if (song.cover.length != 0) {
         song_image.src = song.cover;
     } else {
-        song_image.src = "../assets/placeholder.svg"
+        song_image.src = "./assets/placeholder.svg"
     }
 
 
