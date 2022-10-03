@@ -1,5 +1,5 @@
 :root {
-    max-width: 70ch;
+    max-width: 50ch;
     padding: 3em 1em;
     margin: auto;
     line-height: 1.75;
@@ -11,64 +11,97 @@
     font-style: normal;
 }
 
-div.flex-container {
+/* div.flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-.text-container {
-    width: 75%;
-}
+/* now playing section */
 
-div.now-playing {
+#now-playing-section {
     display: flex;
     border-bottom: 5px black solid;
     border-right: 5px black solid;
-    border-left:5px black solid;
+    border-left: 5px black solid;
     height: 7em;
     box-sizing: border-box;
+    margin-bottom: .5em;
     
 }
 
-.yellow-on-black {
+#yellow-on-black {
     color: var(--main-bg-color);
     background-color: black;
     font-weight: 600;
-    padding: 0em 1em 0em 1em;
-    margin-top: 1em;
+    padding: 0em .5em 0em .5em;
 }
 
-.now-playing-text {
+#now-playing-text {
     padding-left: 1em;
     padding-top: 1em;
     display: flex;
     flex-direction: column; 
-    /* align-self: center; */
-    line-height: 1.2em;
+    line-height: 1em;
 
 }
 
-.now-playing-title {
+#dynamicTitle {
     font-weight: 600;
     font-size: 1.3em;
     padding-bottom: .4em;
 }
 
 
-.now-playing-artist {
+#dynamicArtist {
     font-weight: 200;
     font-size: 1em;
 }
 
-.album-art {
-    float:right;
-    max-width: 50%;
+#dynamicImg {
     border-right: 1px black dotted;
 }
 
+/* Recently Played section */
+
+#recently-played-section {
+    /* justify-content: space-evenly; */
+    /* border: 5px solid black; */
+}
+
+.recently-played-node {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    display: flex;
+    /* justify-content: space-evenly; */
+    height: 5em;
+    /* padding-top: .5em; */
+    /* padding-bottom: .5em; */
+
+    border-bottom: 2px black dotted;
+    box-sizing: border-box;
+}
+#recently-played-text {
+    padding-left: .5em;
+    flex-grow: 2;
+    line-height: 1em;
+
+}
+#recently-played-title {
+    font-weight: 700;
+}
+#recently-played-artist {
+    font-size: 80%;
+}
+#recently-played-time {
+    align-self:flex-end;
+}
+
+
+
+/* Header, links, etc */
+
 .link-container {
-    /* padding-top: .6em; */
     padding-bottom: .5em;
     text-align-last: justify;
     border-bottom: 2px black dotted;
@@ -78,5 +111,13 @@ div.now-playing {
 
 a {
     text-decoration-style: dotted;
-    font-weight: 700
-;}
+    font-weight: 700;
+}
+
+.audio-player {
+    width: inherit;
+    width: 100%;
+    margin-top: .5em;
+}
+
+  

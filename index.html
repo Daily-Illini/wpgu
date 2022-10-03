@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -20,9 +20,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <div class="flex-container">
             <div class="text-container">
-                <img src="assets/horizontal_wordmark.svg" style="max-width: 50ch;"alt="WPGU logo"> 
+                <img src="assets/horizontal_wordmark.svg" style="max-width: 40ch;"alt="WPGU logo"> 
 
                 <div class="link-container">
                     <a href="">about</a>
@@ -31,14 +30,21 @@
                     <a href="">news</a>
                     <a href="">shop</a>
                 </div>
-                <div class="yellow-on-black">NOW PLAYING</div>
 
-                <div class="now-playing">
-                    <img src="assets/placeholder.svg" id="dynamicImg" class="album-art" alt="Currently playing album art">
-                    <div class="now-playing-text">
-                        <div class = "now-playing-title" id="dynamicTitle">WPGU 107.1</div>
+                <audio controls class="audio-player">
+                    <source src="https://ice64.securenetsystems.net/WPGUFM">
+                </audio>
+
+                
+                <div id="yellow-on-black">NOW PLAYING</div>
+
+
+                <div id="now-playing-section">
+                    <img src="assets/placeholder.svg" id="dynamicImg" alt="Currently playing album art">
+                    <div id="now-playing-text">
+                        <div id="dynamicTitle">WPGU 107.1</div>
                         <br>
-                        <div class = "now-playing-artist" id="dynamicArtist">Champaign's Alternative</div>
+                        <div id="dynamicArtist">Champaign's Alternative</div>
                     </div>
                     <script>
                         var xmlhttp = new XMLHttpRequest();
@@ -64,22 +70,26 @@
                         }
                         </script>
                 </div>
+            
+                <div id="yellow-on-black">RECENTLY PLAYED</div>
+
+            <div id="recently-played-section">
+                <div class="recently-played-node">
+                    <img src="assets/placeholder_albumart.jpg">
+                    <div id="recently-played-text">
+                        <div id="recently-played-title">Breakfast in America</div>
+                        <div id="recently-played-artist"><i>Supertramp</i>
+                        </div>
+                    </div>
+                    <div id="recently-played-time">
+                        1 min ago
+                    </div>
+                    </div>
+                </div>
             </div>
-
-
-        </div>
+   
+        </div>  
+          
         <!-- <script src="" async defer></script> -->
     </body>
 </html>
-
-<!-- <html>
-  <body>
-    <a id="dynamicLink" href=""><img id="dynamicImg" src="" /> </a>
-  </body>
-  <script>
-    var link = document.getElementById('dynamicLink'); 
-    link.href = "http://www.url.com"
-    var img = document.getElementById('dynamicImg'); 
-    img.src = "http://www.url.com/img.png"
-  </script>
-</html> -->
