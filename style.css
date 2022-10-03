@@ -60,6 +60,7 @@
 
 #dynamicImg {
     border-right: 1px black dotted;
+    height: 100%;
 }
 
 /* Recently Played section */
@@ -95,6 +96,11 @@
 }
 #recently-played-time {
     align-self:flex-end;
+}
+img.recently-played-image {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
 }
 
 
