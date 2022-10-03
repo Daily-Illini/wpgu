@@ -97,7 +97,7 @@
 #recently-played-time {
     align-self:flex-end;
 }
-img.recently-played-image {
+.recently-played-image {
     height: 100%;
     width: auto;
     aspect-ratio: 1;
