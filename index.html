@@ -20,22 +20,24 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+        <a href="/"><img src="assets/horizontal_wordmark.svg" style="max-width: 40ch;"alt="WPGU logo"> </a>
+
+        <div class="link-container">
+            <a href="./about/">about</a>
+            <a href="./on-air/">on-air</a>
+            <a href="./news/">news</a>
+            <a href="./shop/">shop</a>
+        </div>
+
+        <div id="yellow-on-black" style="margin-top:2em;">LIVESTREAM</div>
+        <audio controls class="audio-player">
+            <source src="https://ice64.securenetsystems.net/WPGUFM">
+        </audio>
+        
             <div class="text-container">
-                <img src="assets/horizontal_wordmark.svg" style="max-width: 40ch;"alt="WPGU logo"> 
 
-                <div class="link-container">
-                    <a href="">about</a>
-                    <a href="">music</a>
-                    <a href="">on-air</a>
-                    <a href="">news</a>
-                    <a href="">shop</a>
-                </div>
 
-                <audio controls class="audio-player">
-                    <source src="https://ice64.securenetsystems.net/WPGUFM">
-                </audio>
 
-                
                 <div id="yellow-on-black">NOW PLAYING</div>
 
 
@@ -64,10 +66,23 @@
                     </div>
                 </div> -->
             </div>
+            <!-- <a href="" style="">more songs ▶</a> -->
             <script src="javascript/populate_recents.js"></script>
    
         </div>  
-          
+        <div style="display: flex; justify-content: space-evenly; margin-top: 1em;">
+            <a href="https://publicfiles.fcc.gov/fm-profile/wpgu#details" target="_blank" rel="noopener noreferrer">FCC public file</a>
+            ⁎
+            <!-- <div id="copyright"></div>
+            ⁎ -->
+
+            <a href="http://illinimedia.org/" target="_blank" rel="noopener noreferrer">The Illini Media Company</a>
+            <!-- <script>
+                var year = new Date(Date.now()).getFullYear()
+                // year.getFullYear()
+                document.getElementById("copyright").textContent = "© " + year
+            </script> -->
+        </div>
         <!-- <script src="" async defer></script> -->
     </body>
 </html>

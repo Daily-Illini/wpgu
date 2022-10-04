@@ -3,13 +3,15 @@ const requestURL = 'https://streamdb8web.securenetsystems.net/player_status_upda
 const recently_played_section = document.querySelector('#recently-played-section');
 
 function calculateTimeSince(then) {
-
     then.setHours(then.getHours() - 5)
-
     var now = new Date(Date.now())
-
     var diff = then - now
-    return (Math.floor(Math.abs((then - now)/60000)) + " minutes ago")
+    var minutes = Math.floor(Math.abs((then - now)/60000))
+    if (minutes >= 60)  {
+        return "Over an hour ago"
+    } else {
+        return minutes + " minutes ago"
+    }
 }
 
 function newSong(song) {
@@ -36,9 +38,14 @@ function newSong(song) {
 
     if (song.cover.length != 0) {
         song_image.src = song.cover;
+        song_image.alt = "Album art for " + song.title + " by " + song.artist
+
     } else {
         song_image.src = "./assets/placeholder.svg"
+        song_image.alt = "Placeholder album art"
+
     }
+
 
     text_container.appendChild(song_title)
     text_container.appendChild(song_artist)
@@ -49,11 +56,14 @@ function newSong(song) {
 }
 
 function populate(songs) {
+    dynamic_image = document.getElementById("dynamicImg").src = songs[0].cover
+
     if (songs[0].cover.length != 0) {
-        document.getElementById("dynamicImg").src = songs[0].cover
+        dynamic_image.src = songs[0].cover
     } else {
-        document.getElementById("dynamicImg").src = "./assets/placeholder.svg"
+        dynamic_image.src = "./assets/placeholder.svg"
     }
+    
 
     document.getElementById("dynamicTitle").innerHTML = songs[0].title
     document.getElementById("dynamicArtist").innerHTML = songs[0].artist
