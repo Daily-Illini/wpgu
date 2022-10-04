@@ -56,8 +56,9 @@ function newSong(song) {
 }
 
 function populate(songs) {
-    dynamic_image = document.getElementById("dynamicImg").src = songs[0].cover
+    dynamic_image = document.getElementById("dynamicImg")
 
+    console.log(songs[0].cover.length)
     if (songs[0].cover.length != 0) {
         dynamic_image.src = songs[0].cover
     } else {
