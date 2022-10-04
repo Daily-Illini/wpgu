@@ -95,7 +95,11 @@
     font-size: 80%;
 }
 #recently-played-time {
+    line-height: 1em;
+    /* font-weight: 600; */
+    font-size: 80%;
     align-self:flex-end;
+    font-variant-caps: small-caps;
 }
 .recently-played-image {
     height: 100%;
