@@ -36,7 +36,7 @@ function newSong(song) {
     song_time.id = "recently-played-time"
     song_time.textContent = calculateTimeSince(new Date(song.programStartTS))  
 
-    if (song.cover.length != 0) {
+    if (song.cover.length != 0 && String(song.cover).endsWith(".jpg")) {
         song_image.src = song.cover;
         song_image.alt = "Album art for " + song.title + " by " + song.artist
 
@@ -70,7 +70,7 @@ function populate(songs) {
     document.getElementById("dynamicArtist").innerHTML = songs[0].artist
     
     for(let i = 1; i < songs.length; i++) {
-        if (songs[i].duration == 0 || String(songs[i].title).match(/COM[0-9]{4}/)) {
+        if (songs[i].duration == 0 || songs[i].title.length == 0 || String(songs[i].title).match(/COM[0-9]{4}/)) {
             continue
         } else {
             newSong(songs[i])
