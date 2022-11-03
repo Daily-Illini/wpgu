@@ -59,7 +59,7 @@ function populate(songs) {
     dynamic_image = document.getElementById("dynamicImg")
 
     console.log(songs[0].cover.length)
-    if (songs[0].cover.length != 0) {
+    if (songs[0].cover.length != 0 && songs[0].cover.endsWith(".jpg")) {
         dynamic_image.src = songs[0].cover
     } else {
         dynamic_image.src = "./assets/placeholder.svg"
