@@ -104,6 +104,7 @@
     align-self:flex-end;
     font-variant-caps: small-caps;
     letter-spacing: .15ch;
+    flex-shrink: 0;
 }
 .recently-played-image {
     height: 100%;
