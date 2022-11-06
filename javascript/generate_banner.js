@@ -1,7 +1,7 @@
 // DO NOT ALTER THIS CODE. To update the banner, please edit the banner.json file :)
 const body = document.querySelector('body');
 
-fetch("../javascript/banner.json")
+fetch("/banner.json")
 .then(response => response.json())
 .then(data => showInfo(data));
 
