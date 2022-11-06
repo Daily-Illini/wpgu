@@ -1,6 +1,6 @@
 :root {
     max-width: 50ch;
-    padding: 3em 1em;
+    padding: 0 1em;
     margin: auto;
     line-height: 1.75;
     font-size: 1.25em;
@@ -137,3 +137,33 @@ a {
     
 }
 
+#banner { 
+    /* display:none; */
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background-color: #5b0000; 
+    padding: 1em;
+  }
+#banner-content, #banner-alert{ 
+    color: white;
+    font-weight: 500;
+    text-align: left;
+  }
+
+#banner-content {
+    width:80%;
+    margin:auto;
+}
+
+#banner-callout {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px white dotted;
+    font-weight: 600;
+}
+
+
+audio::-webkit-media-controls-timeline{
+   display: none;
+}
