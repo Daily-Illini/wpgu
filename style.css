@@ -142,8 +142,9 @@ a {
     position: absolute; 
     top: 0; 
     left: 0; 
+    width: 100%;
     background-color: #5b0000; 
-    padding: 1em;
+    padding: 1em 0;
   }
 #banner-content, #banner-alert{ 
     color: white;
@@ -164,6 +165,17 @@ a {
 }
 
 
-audio::-webkit-media-controls-timeline{
-   display: none;
+body {
+    background-color: #F7A11A;
+    padding: 2em;
 }
+#shader-web-background {
+    mix-blend-mode: multiply;
+
+}
+.shader-web-background-fallback {
+    background: #F7A11A;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }

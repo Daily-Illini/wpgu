@@ -1,6 +1,6 @@
 {
     "banner": {
-        "show_banner": true,
+        "show_banner": false,
         "heading_text": "alert",
         "body_text": "WPGU will be off the air starting Monday, September 26 while construction occurs at our tower site. We will continue to stream live at WPGU.com and on the Illinois App. Thank you for your patience.",
         "background_hex_color": "#5b0000",
