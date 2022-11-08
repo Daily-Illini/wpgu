@@ -3,7 +3,7 @@ const requestURL = 'https://streamdb8web.securenetsystems.net/player_status_upda
 const recently_played_section = document.querySelector('#recently-played-section');
 
 function calculateTimeSince(then) {
-    then.setHours(then.getHours() - 5)
+    then.setHours(then.getHours() - 6)
     var now = new Date(Date.now())
     var diff = then - now
     var minutes = Math.floor(Math.abs((then - now)/60000))
@@ -52,7 +52,7 @@ function newSong(song) {
 
     recently_played_section.appendChild(song_node).appendChild(song_image)
     recently_played_section.appendChild(song_node).appendChild(text_container).appendChild(song_time)
-    recently_played_section.appendChild(song_node).appendChild(song_time)
+    // recently_played_section.appendChild(song_node).appendChild(song_time)
 }
 
 function populate(songs) {
