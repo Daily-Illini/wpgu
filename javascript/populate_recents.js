@@ -1,7 +1,9 @@
+// Should return the history simple JSON
 const requestURL = 'https://streamdb8web.securenetsystems.net/player_status_update/WPGUFM_history.txt';
 
 const recently_played_section = document.querySelector('#recently-played-section');
 
+// func that calculates text for time since a song played
 function calculateTimeSince(then) {
     then.setHours(then.getHours() - 6)
     var now = new Date(Date.now())
@@ -14,6 +16,7 @@ function calculateTimeSince(then) {
     }
 }
 
+// function for rendering a new song to the list of recently played
 function newSong(song) {
     const song_node = document.createElement('div')
     song_node.className = "recently-played-node";
@@ -52,9 +55,9 @@ function newSong(song) {
 
     recently_played_section.appendChild(song_node).appendChild(song_image)
     recently_played_section.appendChild(song_node).appendChild(text_container).appendChild(song_time)
-    // recently_played_section.appendChild(song_node).appendChild(song_time)
 }
 
+//function for nowplaying
 function populate(songs) {
     dynamic_image = document.getElementById("dynamicImg")
 
@@ -78,7 +81,7 @@ function populate(songs) {
     }
 }
 
+//driver code
 fetch(requestURL)
     .then( res => { return res.json(); } )
     .then( data => { populate(data.playHistory.song); } )
-    // .catch( err => { console.errror(error) } )
